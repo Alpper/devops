@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
 import pandas as pd
@@ -37,4 +38,4 @@ api.add_resource(Name, '/playername')
 api.add_resource(Player, '/Player')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",debug=True)
