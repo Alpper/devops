@@ -14,14 +14,14 @@ class Player(Resource):
     def post(self):
         name = request.args['name']
         position = request.args['position']
-        team = request.args['team']
+        country = request.args['country']
 
         data = pd.read_csv('Player.csv')
 
         new_data = pd.DataFrame({
             'name': [name],
             'position': [position],
-            'team': [team]
+            'country': [country]
         })
         data = data.append(new_data, ignore_index=True)
         data.to_csv('Player.csv', index=False)
